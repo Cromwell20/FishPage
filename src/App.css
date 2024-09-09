@@ -2,37 +2,103 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the header is above other content */
 }
 
-.App-link {
-  color: #61dafb;
+.nav-menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0; /* Remove default margin */
 }
 
-@keyframes App-logo-spin {
+.nav-menu li {
+  margin: 0 15px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: white;
+  color: #282c34;
+}
+
+.media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.side-image {
+  width: auto;
+  height: 300px; /* Half the height of the video */
+  max-height: 300px; /* Ensure the image doesn't exceed a certain height */
+  max-width: 800px;
+  margin: 0 10px;
+}
+
+.left-image {
+  animation: spin-clockwise 0.9s linear infinite; /* 5 rotations per second */
+}
+
+.right-image {
+  animation: spin-counterclockwise 0.9s linear infinite; /* 5 rotations per second */
+}
+
+@keyframes spin-clockwise {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes spin-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 560px; /* Ensure the video doesn't exceed a certain width */
+  height: 0; /* Height is controlled by padding-bottom */
+  padding-bottom: 315px; /* 16:9 aspect ratio */
+  overflow: hidden;
+  background: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  padding: 20px;
+  margin-top: 60px; /* Adjust this value based on the height of your header */
 }

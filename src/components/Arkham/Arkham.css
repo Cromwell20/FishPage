@@ -1,0 +1,142 @@
+.arkham-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: flex-start; /* Align items to the top */
+  }
+  
+  .left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1; /* Allow the panel to grow */
+  }
+  
+  .input-add-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .center-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    flex: 2; /* Allow the panel to grow more than the left and right panels */
+  }
+  
+  .revealed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .revealed-items {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    justify-content: center; /* Center the items */
+  }
+
+  .revealed-item {
+    font-size: 24px; /* Increase font size */
+    font-family: inherit; /* Match font family to the rest of the website */
+    cursor: pointer; /* Indicate that the items are clickable */
+    margin-right: 5px; /* Add some space between items */
+    padding: 5px; /* Add padding to make the clickable area larger */
+    border: 2px solid transparent; /* Invisible border */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    border-radius: 10px; /* Round the corners */
+  }
+
+  .revealed-item:hover {
+    border-color: #61dafb; /* Glow up effect on hover */
+    background-color: #bce7f5; /* Very light blue background on hover */
+  }
+
+  .revealed-container span {
+    font-size: 24px; /* Increase font size */
+    font-family: inherit; /* Match font family to the rest of the website */
+    cursor: pointer; /* Indicate that the items are clickable */
+    margin-right: 5px; /* Add some space between items */
+  }
+
+  .revealed-container p {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    font-size: 24px; /* Increase font size */
+    font-family: inherit; /* Match font family to the rest of the website */
+    cursor: pointer; /* Indicate that the items are clickable */
+  }
+  
+  button {
+    background-color: #61dafb;
+    color: #282c34;
+    border: 2px solid #61dafb;
+    border-radius: 10px; /* Round the corners */
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 10px 0;
+    white-space: nowrap; /* Prevent line breaks */
+    width: 150px; /* Set specific width for all buttons */
+  }
+  
+  button:hover {
+    background-color: #282c34;
+    color: #61dafb;
+  }
+
+  .reveal-token-button {
+    width: auto; /* Allow the button to be wide enough to encapsulate the text */
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    font-size: 18px;
+    margin-left: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    height: 42px; /* Match the height of the buttons */
+  }
+  
+.reset-button {
+  margin-top: 10px; /* Add some space above the reset button */
+  border-radius: 10px; /* Round the corners */
+}
+
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    flex: 1; /* Allow the panel to grow */
+    margin-left: 20px;
+  }
+  
+  .bag-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+  }
+  
+  .bag-item {
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+    margin: 0px 0; /* Reduce space between items */
+    padding: 1px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, background-color 0.3s;
+    border-radius: 10px;
+  }
+  
+  .bag-item:hover {
+    border-color: #61dafb;
+    background-color: #e0f7ff;
+  }
