@@ -15,7 +15,7 @@ function App() {
         <header className="App-header">
           <nav>
             <ul className="nav-menu">
-              <li><Link to="/">Home</Link></li>
+              <li><Link to="/FishPage">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/arkham">Arkham</Link></li>
@@ -24,7 +24,7 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/FishPage" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/arkham" element={<Arkham />} />
