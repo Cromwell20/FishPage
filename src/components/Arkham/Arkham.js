@@ -55,12 +55,21 @@ function Arkham() {
   };
 
   const removeRevealedItem = (item) => {
-    setRevealedOptions(revealedOptions.filter(option => option !== item));
-    setAvailableOptions(availableOptions.filter(option => option !== item));
+    const index = revealedOptions.findIndex(option => option === item);
+    if (index !== -1) {
+      const newRevealedOptions = [...revealedOptions];
+      newRevealedOptions.splice(index, 1);
+      setRevealedOptions(newRevealedOptions);
+    }
   };
 
   const removeBagItem = (item) => {
-    setAvailableOptions(availableOptions.filter(option => option !== item));
+    const index = availableOptions.findIndex(option => option === item);
+    if (index !== -1) {
+      const newAvailableOptions = [...availableOptions];
+      newAvailableOptions.splice(index, 1);
+      setAvailableOptions(newAvailableOptions);
+    }
   };
 
   return (
