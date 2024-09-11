@@ -1,0 +1,33 @@
+/* Contact.css */
+
+.contact-container {
+    text-align: center;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Set fixed size for grid items */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .grid-item {
+    border: 1px solid black;
+    width: 100px; /* Set fixed size for grid items */
+    height: 100px; /* Set fixed size for grid items */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .grid-item img {
+    max-width: 80%; /* Ensure the image fits within the grid item */
+    max-height: 80%; /* Ensure the image fits within the grid item */
+  }
+  
+  .winner-text {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: green;
+  }
