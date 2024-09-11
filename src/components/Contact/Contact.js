@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Contact.css'; // Import the CSS file
 
 // Import images
@@ -40,15 +40,7 @@ function Contact() {
   const [list3] = useState(generateRandomList());
   const [grid, setGrid] = useState([]);
   const [winner, setWinner] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
-
-  const handleInteraction = () => {
-    if (!hasInteracted) {
-      audio1.play();
-      setHasInteracted(true);
-    }
-    generateNumbers();
-  };
+  const [isAgeVerified, setIsAgeVerified] = useState(false);
 
   const generateNumbers = () => {
     const getRandomIndex = (list) => Math.floor(Math.random() * list.length);
@@ -94,11 +86,27 @@ function Contact() {
     }
   };
 
+  const handleAgeVerification = (isAdult) => {
+    if (isAdult) {
+      audio1.play();
+      setIsAgeVerified(true);
+    } else {
+      window.location.href = 'https://www.minimax.hu/';
+    }
+  };
+
   return (
     <div className="contact-container">
       <h1>Contact Page</h1>
       <p>Get in touch with us!</p>
-      <button onClick={handleInteraction}>Spin</button>
+      {!isAgeVerified ? (
+        <div className="age-verification-container">
+          <button className="age-verification-button" onClick={() => handleAgeVerification(true)}>I am 18 or older</button>
+          <button className="age-verification-button" onClick={() => handleAgeVerification(false)}>I am under 18</button>
+        </div>
+      ) : (
+        <button onClick={generateNumbers}>Spin</button>
+      )}
       {grid.length > 0 && (
         <div>
           <div className="grid-container">
