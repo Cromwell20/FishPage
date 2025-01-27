@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Arkham.css'; // Import the CSS file for styling
 
 function Arkham() {
@@ -7,6 +7,16 @@ function Arkham() {
   const [revealedOptions, setRevealedOptions] = useState([]);
   const [newOption, setNewOption] = useState('');
   const [savedList, setSavedList] = useState([]);
+  const [curseCount, setCurseCount] = useState(0);
+  const [blessCount, setBlessCount] = useState(0);
+
+  useEffect(() => {
+    const countCurse = availableOptions.filter(option => option === 'Curse').length;
+    setCurseCount(countCurse);
+
+    const countBless = availableOptions.filter(option => option === 'Bless').length;
+    setBlessCount(countBless);
+  }, [availableOptions]);
 
   const loadBag = () => {
     if (savedList.length > 0) {
@@ -28,15 +38,37 @@ function Arkham() {
   };
 
   const addCurse = () => {
-    setAvailableOptions([...availableOptions, 'Curse']);
+    if (curseCount < 10) {
+      setAvailableOptions([...availableOptions, 'Curse']);
+    }
   };
 
   const addBless = () => {
+    if (blessCount < 10) {
     setAvailableOptions([...availableOptions, 'Bless']);
+    }
   };
 
   const saveBag = () => {
     setSavedList([...availableOptions]);
+  };
+
+  const removeFirstCurse = () => {
+    const index = availableOptions.findIndex(option => option === 'Curse');
+    if (index !== -1) {
+      const newAvailableOptions = [...availableOptions];
+      newAvailableOptions.splice(index, 1);
+      setAvailableOptions(newAvailableOptions);
+    }
+  };
+
+  const removeFirstBless = () => {
+    const index = availableOptions.findIndex(option => option === 'Bless');
+    if (index !== -1) {
+      const newAvailableOptions = [...availableOptions];
+      newAvailableOptions.splice(index, 1);
+      setAvailableOptions(newAvailableOptions);
+    }
   };
 
   const revealToken = () => {
@@ -78,7 +110,9 @@ function Arkham() {
         <button onClick={loadBag}>Load Bag</button>
         <button onClick={saveBag}>Save Bag</button>
         <button onClick={addCurse}>Add Curse</button>
+        <button onClick={removeFirstCurse}>Curses: {curseCount}</button>
         <button onClick={addBless}>Add Bless</button>
+        <button onClick={removeFirstBless}>Blesses: {blessCount}</button>
         <div className="input-add-container">
           <button onClick={addToBag}>Custom token</button>
           <input

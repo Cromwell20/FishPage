@@ -1,6 +1,4 @@
 import React from 'react';
-import leftImage from '../../assets/images/left-image.png';
-import rightImage from '../../assets/images/right-image.png';
 
 function Home() {
   return (
@@ -8,7 +6,6 @@ function Home() {
       <h1>Home Page</h1>
       <p>Welcome to the home page!</p>
       <div className="media-container">
-        <img src={leftImage} alt="Left" className="side-image left-image" />
         <div className="video-container">
           <iframe
             width="560"
@@ -21,7 +18,6 @@ function Home() {
             allowFullScreen
           ></iframe>
         </div>
-        <img src={rightImage} alt="Right" className="side-image right-image" />
       </div>
     </div>
   );
