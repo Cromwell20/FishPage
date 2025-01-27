@@ -1,14 +1,12 @@
 {
   "files": {
     "main.css": "/FishPage/static/css/main.be1eb717.css",
-    "main.js": "/FishPage/static/js/main.1b53940d.js",
+    "main.js": "/FishPage/static/js/main.611eecc9.js",
     "static/js/453.156030ac.chunk.js": "/FishPage/static/js/453.156030ac.chunk.js",
     "static/media/lets-go-gambling_03.mp3": "/FishPage/static/media/lets-go-gambling_03.06a14bc3a97a3ab4261c.mp3",
     "static/media/6.png": "/FishPage/static/media/6.6f6a7aa2855a3129cd9e.png",
     "static/media/8.png": "/FishPage/static/media/8.0b72a0fe3c2428a6427d.png",
-    "static/media/right-image.png": "/FishPage/static/media/right-image.8cbdb9d02f86e9222ee3.png",
     "static/media/2.png": "/FishPage/static/media/2.8ad93b454211301b66fe.png",
-    "static/media/left-image.png": "/FishPage/static/media/left-image.f37168d260b95cd6f35b.png",
     "static/media/1.png": "/FishPage/static/media/1.162af3b7ec1259bf1cc0.png",
     "static/media/3.png": "/FishPage/static/media/3.86bb91c91c0006a6f5e9.png",
     "static/media/5.png": "/FishPage/static/media/5.d357e02f79c63e68c03a.png",
@@ -20,11 +18,11 @@
     "static/media/lets-go-gambling_01.mp3": "/FishPage/static/media/lets-go-gambling_01.0b2cd77d9c385af86a39.mp3",
     "index.html": "/FishPage/index.html",
     "main.be1eb717.css.map": "/FishPage/static/css/main.be1eb717.css.map",
-    "main.1b53940d.js.map": "/FishPage/static/js/main.1b53940d.js.map",
+    "main.611eecc9.js.map": "/FishPage/static/js/main.611eecc9.js.map",
     "453.156030ac.chunk.js.map": "/FishPage/static/js/453.156030ac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.be1eb717.css",
-    "static/js/main.1b53940d.js"
+    "static/js/main.611eecc9.js"
   ]
 }
