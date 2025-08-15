@@ -144,17 +144,16 @@ input[type="text"] {
 
 /* ===== Rolling Log Styles ===== */
 .log-container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  max-height: 40vh; /* grows, then scrolls */
-  overflow-y: auto;
+  /* remove position/left/right/bottom */
+  max-height: 40vh;          /* how tall it can get before scrolling */
+  overflow-y: auto;          /* scroll for older items */
   border-top: 1px solid #61dafb;
   padding: 8px 10px;
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  width: 100%;
+  margin-top: 12px;          /* space below the buttons */
 }
 
 .log-header {

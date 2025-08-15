@@ -9,6 +9,7 @@ function Arkham() {
   const [savedList, setSavedList] = useState([]);
   const [curseCount, setCurseCount] = useState(0);
   const [blessCount, setBlessCount] = useState(0);
+  const [drawLog, setDrawLog] = useState([]);
 
   useEffect(() => {
     const countCurse = availableOptions.filter(option => option === 'Curse').length;
@@ -74,10 +75,9 @@ function Arkham() {
 
   const revealToken = () => {
     if (availableOptions.length === 0) return;
-
     const randomIndex = Math.floor(Math.random() * availableOptions.length);
     const selectedOption = availableOptions[randomIndex];
-
+    setDrawLog(prev => [{ token: selectedOption, ts: Date.now() }, ...prev]);
     setRevealedOptions([...revealedOptions, selectedOption]);
     setAvailableOptions(availableOptions.filter((option, index) => index !== randomIndex));
   };
