@@ -18,7 +18,8 @@ function Arkham() {
     const countBless = availableOptions.filter(option => option === 'Bless').length;
     setBlessCount(countBless);
   }, [availableOptions]);
-
+  const [drawLog, setDrawLog] = useState([]); // newest first
+  setDrawLog(prev => [{ token: selectedOption, ts: Date.now() }, ...prev]);
   const loadBag = () => {
     if (savedList.length > 0) {
       setAvailableOptions([...savedList]);
