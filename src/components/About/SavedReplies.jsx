@@ -5,6 +5,53 @@ import defaultData from "./defaultReplies.json";
 function uid() {
   return "id_" + Math.random().toString(36).slice(2, 9);
 }
+// --- search helpers ---
+function normalize(str) {
+  return (str || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, ""); // remove accents
+}
+
+// 1 substitution allowed (same length, <=1 different char)
+function isOneSubstitution(a, b) {
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i] && ++diff > 1) return false;
+  }
+  return true;
+}
+
+// typed term is exactly one char shorter than a word in text
+function isOneDeletionOf(longer, shorter) {
+  if (longer.length !== shorter.length + 1) return false;
+  let i = 0, j = 0, skipped = 0;
+  while (i < longer.length && j < shorter.length) {
+    if (longer[i] === shorter[j]) { i++; j++; }
+    else {
+      if (skipped) return false;
+      skipped = 1;
+      i++; // skip one char in the longer string
+    }
+  }
+  return true; // trailing char is the one skip if needed
+}
+
+// term matches if: substring OR (>=3: one deletion) OR (>=4: one substitution)
+function termMatches(haystackRaw, haystackWords, term) {
+  if (!term) return true;
+  if (haystackRaw.includes(term)) return true;
+
+  // try fuzzy matches against individual words
+  for (const w of haystackWords) {
+    if (w === term) return true;
+    if (term.length >= 3 && isOneDeletionOf(w, term)) return true;    // missing 1 letter
+    if (term.length >= 4 && isOneSubstitution(w, term)) return true;  // 1 mistyped letter
+  }
+  return false;
+}
+
 
 export default function SavedRepliesLite() {
   const [replies, setReplies] = useState([]);
@@ -35,17 +82,21 @@ export default function SavedRepliesLite() {
     return () => window.removeEventListener("keydown", onKey);
   }, [title, tags, content, editingId, replies]);
 
-  const filtered = useMemo(() => {
-    const q = search.trim().toLowerCase();
-    return replies
-      .filter((r) => {
-if (selectedTags.length && !selectedTags.every((t) => (r.tags || []).includes(t))) return false;
-        if (!q) return true;
-        const bag = `${r.title} ${r.content} ${(r.tags || []).join(" ")}`.toLowerCase();
-        return bag.includes(q);
-      })
-      .sort((a, b) => (b.updated || b.created || 0) - (a.updated || a.created || 0));
+const filtered = useMemo(() => {
+  const terms = normalize(search).split(/\s+/).filter(Boolean); // AND terms
+  return replies
+    .filter((r) => {
+      if (selectedTags.length && !selectedTags.every((t) => (r.tags || []).includes(t))) return false;
+      if (!terms.length) return true;
+
+      const raw = normalize(`${r.title || ""} ${r.content || ""} ${(r.tags || []).join(" ")}`);
+      const words = raw.split(/[^a-z0-9]+/).filter(Boolean);
+
+      return terms.every((t) => termMatches(raw, words, t));
+    })
+    .sort((a, b) => (b.updated || b.created || 0) - (a.updated || a.created || 0));
 }, [replies, search, selectedTags]);
+
 
   const tagCounts = useMemo(() => {
     const m = new Map();
@@ -231,7 +282,16 @@ const handleImportDefault = () => {
     {/* CENTER: tags (stay in the middle and wrap here only) */}
     <div className="topbar-center">
       <div className="tag-bar">
-        <button className="tag-btn" onClick={() => setSelectedTags([])}>All</button>
+        <button
+  className="tag-btn"
+  onClick={() => {
+    setSelectedTags([]);
+    setSearch("");          // also clear the search field
+  }}
+>
+  All
+</button>
+
         {tagCounts.map(([t, c]) => (
           <button
             key={t}
