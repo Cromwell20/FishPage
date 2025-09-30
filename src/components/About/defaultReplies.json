@@ -1,0 +1,79 @@
+{
+  "replies": [
+    {
+      "title": "Kompenzációs lehetőségek",
+      "content": "Jóvá tudom írni számodra a sérült tételek egy részét. 🙏\n\nVagy Wolt kreditek formájában. 🪙\n\nVagy az utoljára használt bankkártyádra. 💸",
+      "tags": ["kompenzáció", "jóváírás", "kártya", "kredit"]
+    },
+    {
+      "title": "Étterem felelőssége",
+      "content": "Nagyon sajnálom, de úgy látom hogy az étterem Woltot csak egy közvetítő platformként használja.\n\nSajnos emiatt nincs közvetlen rálátásunk arra, hogy az étterem hogy áll a rendelésed elkészítésével.\n\nKérlek vedd fel az étteremmel a kapcsolatot az alábbi telefonszámon. 🙏\n\n[telefonszám]",
+      "tags": ["étterem", "információ", "telefon"]
+    },
+    {
+      "title": "Késedelmes válasz",
+      "content": "Szia! 👋\n\nNagyon sajnálom, hogy csak most tudtunk válaszolni számodra! 😔\nÜgyfélszolgálatunk most sokkal leterheltebb a szokásosnál.\n\nMáris nézem mit tehetek! 😺🔎",
+      "tags": ["késés", "ügyfélszolgálat", "elnézés"]
+    },
+    {
+      "title": "Nincs készleten",
+      "content": "🇭🇺 Nincs az üzletben a rendelt tételből, és nincs megfelelő csere termékük se.\n🇬🇧 The venue doesn't have the purchased item, nor a suitable substitute.",
+      "tags": ["hiány", "étterem", "csere"]
+    },
+    {
+      "title": "Változó kiszállítási hatótáv",
+      "content": "Azért fordulhat elő, hogy néha tudsz rendelni egy étteremtől, máskor meg nem, mert a rendszerünk automatikusan igazítja a kiszállítási hatótávot. 🗺️\n\nEz függhet az időjárástól 🌨️, az elérhető futárok számától, és más tényezőktől is.\n\nEz segít abban, hogy a rendeléseket megbízhatóan teljesítsük. 🙏",
+      "tags": ["futár", "távolság", "időjárás"]
+    },
+    {
+      "title": "Sérült rendelés",
+      "content": "Szia! 👋\n\nBorzasztóan sajnálom hogy ilyen állapotban kaptad meg a rendelésed. 😣\n\nMáris nézem mit tehetek! 🔍",
+      "tags": ["panasz", "sérült", "kompenzáció"]
+    },
+    {
+      "title": "GPS probléma",
+      "content": "Most likely the courier's phone has issues with getting a GPS signal. 🛰️\nHence his inaccurate positioning on the map. 🗺️",
+      "tags": ["futár", "GPS", "hiba"]
+    },
+    {
+      "title": "Elfogyott termék",
+      "content": "Amikor a [ÜZLET] dolgozói össze készítik a rendelésedet, előfordulhat, hogy időközben elfogyott egy termék.\n\nHa van helyettesítő, azt teszik a kosárba, ha nincs, akkor sajnos nem küldik ki.\n\nA hiányzó termékek ára automatikusan visszakerül a kártyádra. 💙",
+      "tags": ["hiány", "helyettesítő", "kártya"]
+    },
+    {
+      "title": "Nem kaptad meg a terméket",
+      "content": "Sajnálattal hallom hogy nem kaptad meg a [Terméket]. 🙏\n\nMegfelelne számodra ha ennek az árát jóváírnám Wolt kreditek formájában? 🪙\n\nJóvá is írtam neked a [Termék] árát Wolt kreditek formájában. 💙",
+      "tags": ["hiány", "kompenzáció", "kredit"]
+    },
+    {
+      "title": "Zárolás és feloldás",
+      "content": "Kezdeményezzük a bankod felé a zárolást. 💳\nHa egy termék nem kerül kiszállításra, az összeget nem vonjuk le ténylegesen, és rövid időn belül feloldódik. ❌\n\nHa mégsem, akkor az már a bank hibája. 🏦",
+      "tags": ["bank", "zárolás", "kártya"]
+    },
+    {
+      "title": "Jóváírás folyamata",
+      "content": "El is indult a jóváírási folyamat. 💸\n\nLegtöbb esetben azonnali. 🏃 Viszont bankodtól függően akár 1-2 munkanap lehet.",
+      "tags": ["kompenzáció", "bank", "jóváírás"]
+    },
+    {
+      "title": "Időzített rendelés",
+      "content": "Sajnos időzített rendeléseknél nem tudjuk garantálni, hogy lesz futár a közelben, amikor az étterem jelzi, hogy kész a rendelés. 🙏",
+      "tags": ["időzítés", "futár", "rendelés"]
+    },
+    {
+      "title": "Minőségi panasz",
+      "content": "Nagyon sajnáljuk, hogy nem voltál elégedett a fagylalt minőségével. 😔\n\nAz étterem szerint megfelel a szokásos minőségi elvárásoknak, így nem indokolt a kompenzáció. 🙏",
+      "tags": ["étterem", "minőség", "panasz"]
+    },
+    {
+      "title": "Chat lezárása",
+      "content": "A csevegést egyelőre lezárjuk. 😊\n\nKérjük, vedd fel velünk a kapcsolatot, ha a továbbiakban segítségre lenne szükséged.",
+      "tags": ["chat", "lezárás", "ügyfélszolgálat"]
+    },
+    {
+      "title": "Futár borravaló",
+      "content": "A futárt nem áll módunkban kompenzálni, de borravalót tudsz adni az alkalmazásban a rendelés után. ✨",
+      "tags": ["futár", "borravaló", "alkalmazás"]
+    }
+  ]
+}
