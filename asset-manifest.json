@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FishPage/static/css/main.04364a07.css",
-    "main.js": "/FishPage/static/js/main.216f58c9.js",
+    "main.js": "/FishPage/static/js/main.3021a8b7.js",
     "static/js/453.156030ac.chunk.js": "/FishPage/static/js/453.156030ac.chunk.js",
     "static/media/lets-go-gambling_03.mp3": "/FishPage/static/media/lets-go-gambling_03.06a14bc3a97a3ab4261c.mp3",
     "static/media/6.png": "/FishPage/static/media/6.6f6a7aa2855a3129cd9e.png",
@@ -18,11 +18,11 @@
     "static/media/lets-go-gambling_01.mp3": "/FishPage/static/media/lets-go-gambling_01.0b2cd77d9c385af86a39.mp3",
     "index.html": "/FishPage/index.html",
     "main.04364a07.css.map": "/FishPage/static/css/main.04364a07.css.map",
-    "main.216f58c9.js.map": "/FishPage/static/js/main.216f58c9.js.map",
+    "main.3021a8b7.js.map": "/FishPage/static/js/main.3021a8b7.js.map",
     "453.156030ac.chunk.js.map": "/FishPage/static/js/453.156030ac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.04364a07.css",
-    "static/js/main.216f58c9.js"
+    "static/js/main.3021a8b7.js"
   ]
 }
