@@ -2,16 +2,20 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start;
+  /* Align items to the top */
 }
 
 .left-panel {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 1; /* Allow the panel to grow */
-  position: relative;       /* NEW for log positioning */
-  padding-bottom: 160px;     /* NEW: space for the log */
+  flex: 1;
+  /* Allow the panel to grow */
+  position: relative;
+  /* NEW for log positioning */
+  padding-bottom: 160px;
+  /* NEW: space for the log */
 }
 
 .input-add-container {
@@ -24,8 +28,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center content vertically */
-  flex: 2; /* Allow the panel to grow more than the left and right panels */
+  justify-content: center;
+  /* Center content vertically */
+  flex: 2;
+  /* Allow the panel to grow more than the left and right panels */
 }
 
 .revealed-container {
@@ -33,36 +39,58 @@
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+
+  /* NEW: keep a reserved space for tokens + Reset button */
+  min-height: 120px;
+  /* tweak 80–120px to taste */
+  justify-content: center;
 }
 
 .revealed-items {
   display: flex;
-  flex-direction: row; /* Align items in a row */
-  flex-wrap: wrap; /* Allow wrapping if necessary */
-  justify-content: center; /* Center the items */
+  flex-direction: row;
+  /* Align items in a row */
+  flex-wrap: wrap;
+  /* Allow wrapping if necessary */
+  justify-content: center;
+  /* Center the items */
 }
 
 .revealed-item {
-  font-size: 24px; /* Increase font size */
-  font-family: inherit; /* Match font family to the rest of the website */
-  cursor: pointer; /* Indicate that the items are clickable */
-  margin-right: 5px; /* Add some space between items */
-  padding: 5px; /* Add padding to make the clickable area larger */
-  border: 2px solid transparent; /* Invisible border */
-  transition: border-color 0.3s; /* Smooth transition for border color */
-  border-radius: 10px; /* Round the corners */
+  font-size: 24px;
+  /* Increase font size */
+  font-family: inherit;
+  /* Match font family to the rest of the website */
+  cursor: pointer;
+  /* Indicate that the items are clickable */
+  margin-right: 5px;
+  /* Add some space between items */
+  padding: 5px;
+  /* Add padding to make the clickable area larger */
+  border: 2px solid transparent;
+  /* Invisible border */
+  transition: border-color 0.3s;
+  /* Smooth transition for border color */
+  border-radius: 10px;
+  /* Round the corners */
 }
 
 .revealed-item:hover {
-  border-color: #61dafb; /* Glow up effect on hover */
-  background-color: #bce7f5; /* Very light blue background on hover */
+  border-color: #61dafb;
+  /* Glow up effect on hover */
+  background-color: #bce7f5;
+  /* Very light blue background on hover */
 }
 
 .revealed-container span {
-  font-size: 24px; /* Increase font size */
-  font-family: inherit; /* Match font family to the rest of the website */
-  cursor: pointer; /* Indicate that the items are clickable */
-  margin-right: 5px; /* Add some space between items */
+  font-size: 24px;
+  /* Increase font size */
+  font-family: inherit;
+  /* Match font family to the rest of the website */
+  cursor: pointer;
+  /* Indicate that the items are clickable */
+  margin-right: 5px;
+  /* Add some space between items */
 }
 
 .revealed-container p {
@@ -70,23 +98,29 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 10px 0;
-  font-size: 24px; /* Increase font size */
-  font-family: inherit; /* Match font family to the rest of the website */
-  cursor: pointer; /* Indicate that the items are clickable */
+  font-size: 24px;
+  /* Increase font size */
+  font-family: inherit;
+  /* Match font family to the rest of the website */
+  cursor: pointer;
+  /* Indicate that the items are clickable */
 }
 
 button {
   background-color: #61dafb;
   color: #282c34;
   border: 2px solid #61dafb;
-  border-radius: 10px; /* Round the corners */
+  border-radius: 10px;
+  /* Round the corners */
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   margin: 10px 0;
-  white-space: nowrap; /* Prevent line breaks */
-  width: 150px; /* Set specific width for all buttons */
+  white-space: nowrap;
+  /* Prevent line breaks */
+  width: 150px;
+  /* Set specific width for all buttons */
 }
 
 button:hover {
@@ -95,7 +129,8 @@ button:hover {
 }
 
 .reveal-token-button {
-  width: auto; /* Allow the button to be wide enough to encapsulate the text */
+  width: auto;
+  /* Allow the button to be wide enough to encapsulate the text */
 }
 
 input[type="text"] {
@@ -104,33 +139,40 @@ input[type="text"] {
   margin-left: 10px;
   border: 2px solid #ffffff;
   border-radius: 10px;
-  height: 42px; /* Match the height of the buttons */
+  height: 42px;
+  /* Match the height of the buttons */
 }
 
 .reset-button {
-  margin-top: 10px; /* Add some space above the reset button */
-  border-radius: 10px; /* Round the corners */
+  margin-top: 10px;
+  /* Add some space above the reset button */
+  border-radius: 10px;
+  /* Round the corners */
 }
 
 .right-panel {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Align items to the right */
-  flex: 1; /* Allow the panel to grow */
+  align-items: flex-end;
+  /* Align items to the right */
+  flex: 1;
+  /* Allow the panel to grow */
   margin-left: 20px;
 }
 
 .bag-items {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Align items to the right */
+  align-items: flex-end;
+  /* Align items to the right */
 }
 
 .bag-item {
   font-size: 18px;
   font-family: inherit;
   cursor: pointer;
-  margin: 0px 0; /* Reduce space between items */
+  margin: 0px 0;
+  /* Reduce space between items */
   padding: 1px;
   border: 2px solid transparent;
   transition: border-color 0.3s, background-color 0.3s;
@@ -145,15 +187,18 @@ input[type="text"] {
 /* ===== Rolling Log Styles ===== */
 .log-container {
   /* remove position/left/right/bottom */
-  max-height: 40vh;          /* how tall it can get before scrolling */
-  overflow-y: auto;          /* scroll for older items */
+  max-height: 40vh;
+  /* how tall it can get before scrolling */
+  overflow-y: auto;
+  /* scroll for older items */
   border-top: 1px solid #61dafb;
   padding: 8px 10px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   width: 100%;
-  margin-top: 12px;          /* space below the buttons */
+  margin-top: 12px;
+  /* space below the buttons */
 }
 
 .log-header {
@@ -202,4 +247,175 @@ input[type="text"] {
 .log-time {
   font-size: 11px;
   opacity: 0.7;
+}
+
+
+/* ============================
+   Probability Chart Section
+   ============================ */
+
+.arkham-probability-section {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.arkham-probability-section h4 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #282c34;
+}
+
+/* Chart box */
+.probability-chart {
+  width: 100%;
+  max-width: 500px;
+  height: 220px;
+  border: 2px solid #61dafb;
+  border-radius: 14px;
+  padding: 10px 8px 6px;
+  display: flex;
+  align-items: stretch;
+  /* important */
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: white;
+}
+
+/* Each bar container */
+.probability-bar-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 3px;
+}
+
+/* The vertical bar itself */
+.probability-bar {
+  width: 100%;
+  max-width: 32px;
+  background-color: #61dafb;
+  border: 2px solid #282c34;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  transition: height 0.3s;
+}
+
+/* % label inside bar */
+.probability-percent {
+  font-size: 12px;
+  padding-top: 2px;
+  color: #282c34;
+  font-weight: bold;
+}
+
+/* Threshold numbers under bars */
+.probability-threshold {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #282c34;
+}
+
+/* Tiny note under chart */
+.probability-note {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+}
+
+.probability-bar-column {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  /* bar grows up from the bottom */
+}
+
+/* ============================
+   Token Value Editing Row
+   ============================ */
+
+.token-values-settings {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.token-values-settings label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.token-values-settings input[type="number"] {
+  width: 55px;
+  padding: 4px 6px;
+  font-size: 14px;
+  border: 2px solid #61dafb;
+  border-radius: 10px;
+}
+
+/* Label left of the inputs */
+.token-values-label {
+  font-weight: bold;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* inline token settings (label + toggle + number input) */
+.token-setting {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* clickable token name toggle */
+.token-toggle {
+  padding: 4px 10px;
+  border: 2px solid #61dafb;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  user-select: none;
+  font-size: 14px;
+  background-color: white;
+  color: #282c34;
+}
+
+/* active state (blue) */
+.token-toggle-active {
+  background-color: #61dafb;
+  color: #282c34;
+  border-color: #282c34;
+}
+
+.odds-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.odds-toggle button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #61dafb;
+  border: 2px solid #61dafb;
+  color: #282c34;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.odds-toggle button:hover {
+  background: #282c34;
+  color: #61dafb;
 }
